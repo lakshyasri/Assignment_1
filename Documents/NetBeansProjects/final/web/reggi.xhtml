@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+      <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+      <h:head>
+          <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <title>Hello!</title>
+        <style>
+            .error{
+                color: blueviolet
+            } </style>
+    </h:head>
+    <h:body>
+        <div class="jumbotron text-center"><h1>REGISTER</h1></div>
+        <h:form>
+            <p:messages style="color: red;
+     font-family: 'New Century Schoolbook', serif;
+     font-style: oblique;
+     text-decoration: overline"/>
+            <div align="center">
+            <h:panelGrid columns="1" >
+                <h:outputLabel value="User Name:" for="u_name"/>
+                <p:inputText id="u_name" value="#{user.name}" required="true" requiredMessage="Input user name"/><br></br>
+                <h:outputLabel for="l_name" value="&nbsp;Last Name:"/>
+                <p:inputText id="l_name" value="#{user.lname}" required="true" requiredMessage="Input last name"/><br></br>
+                <h:outputLabel for="u_email" value="Email"/>
+                <p:inputText id="u_email" value="#{user.pname}" required="true" requiredMessage="Input Emaid Address"/><br></br>
+                <h:outputLabel for="input1" value="Mobile Number"/>
+                <p:inputNumber id="input1" required="true" requiredMessage="Give correct Mobile no."><f:validateLength maximum="10" minimum="10"/> </p:inputNumber><br></br>                
+                <h:outputLabel value="Password:" for="u_pass"/>
+                <h:inputSecret id="u_pass" value="#{user.pass}" required="true" rendered="true" requiredMessage="Input p[assword"/><br></br>
+                
+                <br></br>               
+                <h:commandButton value="submit" action="over"/>
+                <br></br>
+                
+            </h:panelGrid>
+                  </div>
+        </h:form>   
+    </h:body>
+</html>
